@@ -178,11 +178,12 @@
         }
 
         .price {
-            display: block;
+            display: down;
             color: var(--gold);
             font-weight: 600;
             font-size: 1.6rem;
             margin-bottom: 20px;
+      
         }
 
         .line {
@@ -255,7 +256,7 @@
 <script>
     const items = [
         // ХООЛНУУД (25)
-        {n: "삼겹살 한판| Самгёбсал Ханпан", p: "58,000₮", c: "main", img: "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=600", d: "Гахайн цорой мах Жигнэсэн өндөг, шар буурцагын шөл, бяслагтай эрдэнэ шиш, пүнтүүзтэй хачир."},
+        {n: "삼겹살 한판| Самгёбсал Ханпан", p: "58,000₮  ", c: "main", img: "https://images.unsplash.com/photo-1541783245831-57d6fb0926d3?w=600", d: "Гахайн цорой мах Жигнэсэн өндөг, шар буурцагын шөл, бяслагтай эрдэнэ шиш, пүнтүүзтэй хачир."},
         {n: "돼지 물갈비 Тэжи Мүл Калби", p: "64,000₮", c: "main", img: "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=600", d: "Жигнэсэн өндөг, шар буурцагын шөл бяслагтай эрдэнэ шиш, пүнтүүзтэй хачир."},
         {n: "소불고기 전골 | CyБүлгүги Жонгүл", p: "64,000₮", c: "main", img: "https://images.unsplash.com/photo-1623595110708-76b2f0331002?w=600", d: "Жигнэсэн өндөг, шар буурцагын шөл бяслагтай эрдэнэ шиш, пүнтүүзтэй хачир."},
         {n: "소갈비찜 Су Калбижим", p: "64,000₮", c: "main", img: "https://images.unsplash.com/photo-1498654896293-37aacf113fd9?w=600", d: "Жигнэсэн өндөг, шар буурцагын шөл бяслагтай эрдэнэ шиш, пүнтүүзтэй хачир."},
@@ -281,20 +282,20 @@
         {n: "FUZETEA/0.2L/", p: "3,000₮", c: "soft drinks", img: "fuze tea.jpg", d: ""},
         {n: "MINUTE MAID/0.2L/", p: "3,000₮", c: "soft drinks", img: "maid maid.jpeg", d: ""},
         {n: "BONAQUA/0.5L/", p: "2,000₮", c: "soft drinks", img: "bon aqua.jpg", d: ""},
-        {n: "부대찌개 |Бүдэжигэ", p: "23,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600", d: "Wok-fried squid, spicy chili, flame-kissed vegetables."},
-        {n: "떡볶이 Догбүгги", p: "17,500₮", c: "single menu", img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600", d: "Beef broth ice-soup, buckwheat noodles, Asian pear."},
-        {n: "로제 떡볶이 Лүжэ Догбүгги", p: "17,500₮", c: "single menu", img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600", d: "Beef broth ice-soup, buckwheat noodles, Asian pear."},
-        {n: "불고기 김밥 Булгуги Кимбаб", p: "45,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600", d: "A5 Wagyu, Maldon sea salt, roasted garlic cream."},
-        {n: "야채 김밥 ЯчэКимбаб", p: "27,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1559737558-2f5a35f4520b?w=600", d: "Soju-marinated jumbo prawns, lemon zest, chili."},
-        {n: "어묵탕 | Омүгтан", p: "18,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600", d: "Vegan delight with 5 types of forest mushrooms."},
-        {n: "간장 제육볶음 Канжам ЖэюүгБуггым", p: "26,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1529193591184-b1d58b3fffc9?w=600", d: "Marinated spicy pork ribs, char-grilled to perfection."},
-        {n: "고추장 제육볶음 ЖэюүгБуггым Гочужан", p: "15,500₮", c: "single menu", img: "https://images.unsplash.com/photo-1546069901-5ec6a2ad900c?w=600", d: "Crispy tofu, teriyaki glaze, sesame sprinkles."},
-        {n: "치즈 제육볶음 ЖэюүгБуггым Бяслагтай", p: "14,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600", d: "Steamed dumplings filled with spicy kimchi and pork."},
-        {n: "닭 볶음탕 Так буггимтан", p: "31,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1594179047519-f347310d3322?w=600", d: "Slow-braised galbi-jjim, sweet soy, root vegetables."},
-        {n: "찜닭 ЖимТак", p: "16,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1552611052-33e04de081de?w=600", d: "Spicy chicken broth, handmade noodles, soft egg."},
-        {n: "닭갈비 Так Калби", p: "14,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600", d: "Steamed dumplings filled with spicy kimchi and pork."},
-        {n: "치즈 닭갈비 Бяслагтай Так Калби", p: "31,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1594179047519-f347310d3322?w=600", d: "Slow-braised galbi-jjim, sweet soy, root vegetables."},
-        {n: "감자탕 | Камжатан", p: "16,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1552611052-33e04de081de?w=600", d: "Spicy chicken broth, handmade noodles, soft egg."},
+        {n: "부대찌개 |Бүдэжигэ", p: "1хүн33,000₮ 2хүн60,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600", d: "Спам, хиам, зайдас, дүпү, вандуй, омуг, рамён, бяслаг, мөөг, будаа."},
+        {n: "떡볶이 Догбүгги", p: "15,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600", d: "Догг, омуг."},
+        {n: "로제 떡볶이 Лүжэ Догбүгги", p: "15,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600", d: "Догг, омуг."},
+        {n: "불고기 김밥 Булгуги Кимбаб", p: "13,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600", d: "Үхрийн мах, бууцай, даршилсан лууван шарсан өндөг, лууван, омуг."},
+        {n: "야채 김밥 ЯчэКимбаб", p: "12,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1559737558-2f5a35f4520b?w=600", d: "Бууцай, даршилсан лууван, өндөг лууван, омуг."},
+        {n: "어묵탕 | Омүгтан", p: "25,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600", d: "Омуг, цагаан лууван, мөөг."},
+        {n: "간장 제육볶음 Канжам ЖэюүгБуггым", p: "1хүн27,000₮ 2хүн54,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1529193591184-b1d58b3fffc9?w=600", d: "Гахайн мах, сонгино, будаа."},
+        {n: "고추장 제육볶음 ЖэюүгБуггым Гочужан", p: "1хүн27,000₮ 2хүн54,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1546069901-5ec6a2ad900c?w=600", d: "Гахайн мах, сонгино, будаа."},
+        {n: "치즈 제육볶음 ЖэюүгБуггым Бяслагтай", p: "1хүн33,000₮ 2хүн60,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600", d: "Гахайн мах, сонгино, бяслаг, будаа."},
+        {n: "닭 볶음탕 Так буггимтан", p: "1хүн26,000₮ 2хүн52,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1594179047519-f347310d3322?w=600", d: "Тахианы мах, төмс, лууван, сонгино, будаа."},
+        {n: "찜닭 ЖимТак", p: "1хүн26,000₮ 2хүн52,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1552611052-33e04de081de?w=600", d: "Тахианы мах, төмс, лууван, сонгино, пүнтүүз, будаа."},
+        {n: "닭갈비 Так Калби", p: "1хүн26,000₮ 2хүн52,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=600", d: "Тахианы мах, төмс, лууван, сонгино, догг, байцаа, будаа."},
+        {n: "치즈 닭갈비 Бяслагтай Так Калби", p: "1хүн32,000₮ 2хүн58,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1594179047519-f347310d3322?w=600", d: "Тахианы мах, төмс, лууван, сонгино, догг, байцаа, бяслаг, будаа."},
+        {n: "감자탕 | Камжатан", p: "2хүн64,000₮", c: "single menu", img: "https://images.unsplash.com/photo-1552611052-33e04de081de?w=600", d: "Гахайн ястай мах, сонгино, байцаа, төмс, будаа."},
 ];
 
     const menuDisplay = document.getElementById('main-menu');
